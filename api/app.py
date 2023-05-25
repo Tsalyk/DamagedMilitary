@@ -54,10 +54,10 @@ def predict_img(img):
     global model
 
     if not model:
-        path = 'opt/app/models/model-v5'
+        path = 'opt/app/models/model-v6'
         model = tf.saved_model.load(path).signatures["serving_default"]
 
-    softmax_out = model(tf.constant(img, dtype=tf.float32))['dense_9'][0]
+    softmax_out = model(tf.constant(img, dtype=tf.float32))['output'][0]
     predicted_technique = TECHNIQUE[np.argmax(softmax_out)]
     proba = round(float(np.max(softmax_out)), 4)
 
