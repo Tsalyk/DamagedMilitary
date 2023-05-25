@@ -1,0 +1,7 @@
+tensorflow==2.12
+numpy
+matplotlib
+fastapi
+uvicorn
+pillow
+python-multipart
