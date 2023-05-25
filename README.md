@@ -12,7 +12,7 @@ npm audit fix
 ```
 ***
 
-### Conteinarization
+### Containerization
 ```bash
 docker-compose up -d
 ```
